@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Детальная информация по фильму</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <h1>{{ movie.title }}</h1>
+    <p>Год: {{ movie.year }}</p>
+    <p>Описание: {{ movie.description }}</p>
+    <p>Краткое описание: {{ movie.short_description }}</p>
+    <p>Жанры: {{ movie.genres }}</p>
+    <p>Рейтинг: {{ movie.rating }}</p>
+    <p>Продолжительность: {{ movie.leanght }}</p>
+    <p>Возрастной рейтинг: {{ movie.age_rating }}</p>
+
+    <h2>Актеры:</h2>
+    <ul>
+        {% for actor in actors %}
+        <li>{{ actor }}</li>
+        {% endfor %}
+    </ul>
+
+
+    <h2>Композиторы:</h2>
+    <ul>
+        {% for composer in composers %}
+        <li>{{ composer }}</li>
+        {% endfor %}
+    </ul>
+
+
+    <h2>Редакторы:</h2>
+    <ul>
+        {% for editor in editors %}
+        <li>{{ editor }}</li>
+        {% endfor %}
+    </ul>
+
+
+    <h2>Дизайнеры:</h2>
+    <ul>
+        {% for designer in designers %}
+        <li>{{ designer }}</li>
+        {% endfor %}
+    </ul>
+
+
+    <h2>Режиссёр:</h2>
+    <ul>
+        {% for director in directors %}
+        <li>{{ director }}</li>
+        {% endfor %}
+    </ul>
+
+
+    <h2>Операторы:</h2>
+    <ul>
+        {% for operator in operators %}
+        <li>{{ operator }}</li>
+        {% endfor %}
+    </ul>
+
+
+    <h2>Продюссеры:</h2>
+    <ul>
+        {% for producer in producers %}
+        <li>{{ producer }}</li>
+        {% endfor %}
+    </ul>
+
+
+    <h2>Актёры дубляжа:</h2>
+    <ul>
+        {% for voice_actor in voice_actors %}
+        <li>{{ voice_actor }}</li>
+        {% endfor %}
+    </ul>
+
+
+    <h2>Сценаристы:</h2>
+    <ul>
+        {% for writer in writers %}
+        <li>{{ writer }}</li>
+        {% endfor %}
+    </ul>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
