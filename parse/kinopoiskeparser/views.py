@@ -14,7 +14,8 @@ class ParserOfKinopoisk:
         session.headers.update({'X-API-KEY': token})
         response = session.get(url)
         json_of_movie = json.loads(response.text)
-        pages = range(1, json_of_movie['pages'] + 1)
+        # pages = range(1, json_of_movie['pages'] + 1)
+        pages = range(1, 195)
         for page in pages:
             url = 'https://api.kinopoisk.dev/v1.4/movie?page=' + str(
                 page) + '&selectFields=id&selectFields=name&selectFields=description&selectFields=shortDescription&selectFields=type&selectFields=year&selectFields=movieLength&selectFields=ageRating&selectFields=genres&selectFields=persons&selectFields=watchability&selectFields=rating&type=movie&year=2020&genres.name=%D1%82%D1%80%D0%B8%D0%BB%D0%BB%D0%B5%D1%80'
